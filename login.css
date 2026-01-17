@@ -1,0 +1,110 @@
+/* Telegram Mini App стиль — мягкий, мобильный, минималистичный */
+
+/* Центрирование страницы */
+.page-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  
+    /* Используем нативный фон Telegram WebApp (если открыт через tg), 
+       иначе fallback */
+    background: var(--tg-theme-bg-color, #ffffff);
+    padding: 20px;
+  }
+  
+  /* Карточка входа */
+  .login-card {
+    width: 100%;
+    max-width: 380px;
+  
+    padding: 28px;
+    border-radius: 20px;
+  
+    background: var(--tg-theme-secondary-bg-color, #ffffff);
+  
+    box-shadow: 0 2px 18px rgba(0, 0, 0, 0.08);
+  
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  
+    animation: fadeIn 0.3s ease;
+  }
+  
+  /* Заголовок */
+  .login-card h2 {
+    margin-bottom: 6px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--tg-theme-text-color, #222);
+  }
+  
+  /* Лейблы */
+  .login-card label {
+    font-size: 0.9rem;
+    color: var(--tg-theme-hint-color, #5c5c5c);
+    margin-bottom: -8px;
+  }
+  
+  /* Инпуты */
+  .login-card input {
+    width: 100%;
+    padding: 12px 14px;
+  
+    background: var(--tg-theme-bg-color, #f2f4f7);
+    border-radius: 12px;
+  
+    border: 1px solid var(--tg-theme-bg-color, #e3e6ea);
+  
+    font-size: 1rem;
+    color: var(--tg-theme-text-color, #222);
+  
+    transition: 0.15s ease;
+  }
+  
+  .login-card input:focus {
+    outline: none;
+    border-color: #2aabee; /* Telegram Blue */
+    box-shadow: 0 0 0 3px rgba(42, 171, 238, 0.25);
+  }
+  
+  /* Кнопка */
+  .btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 4px;
+  
+    border: none;
+    border-radius: 14px;
+  
+    background: var(--tg-theme-button-color, #2aabee);
+    color: var(--tg-theme-button-text-color, #ffffff);
+  
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+  
+    transition: opacity 0.2s ease, transform 0.1s ease;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  .btn:active {
+    transform: scale(0.97);
+  }
+  
+  .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* Анимация появления */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  
