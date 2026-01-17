@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  padding: 12px 12px 64px;
+  background: var(--tg-theme-bg-color, #f7fbff);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--tg-theme-text-color, #0c2b52);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
